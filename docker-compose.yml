@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  server:
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+    build: .
+    container_name: server
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.32
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: practice
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
