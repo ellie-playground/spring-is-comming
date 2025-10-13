@@ -1,10 +1,10 @@
-package org.yogiyo;
+package org.practice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YogiyoApplicationTests {
+class PracticeApplicationTests {
 
     @Test
     void contextLoads() {
