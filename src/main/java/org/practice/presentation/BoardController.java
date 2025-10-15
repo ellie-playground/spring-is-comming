@@ -1,5 +1,6 @@
 package org.practice.presentation;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.practice.application.BoardService;
 import org.practice.domain.Board;
@@ -21,7 +22,7 @@ public class BoardController {
     private final BoardService boardService;
 
     @PostMapping
-    public ResponseEntity<Void> createBoard(@RequestBody CreateBoardRequest request) {
+    public ResponseEntity<Void> createBoard(@RequestBody @Valid CreateBoardRequest request) {
         Long id = boardService.createBoard(request);
         return ResponseEntity.created(URI.create("/api/v1/boards/" + id)).build();
     }
