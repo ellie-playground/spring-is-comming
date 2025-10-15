@@ -11,6 +11,7 @@ services:
     ports:
       - "8080:8080"
   mysql:
+    # TODO: health check 추가
     container_name: mysql
     image: mysql:8.0.32
     ports:
