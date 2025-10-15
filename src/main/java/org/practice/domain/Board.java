@@ -8,11 +8,15 @@ import lombok.NoArgsConstructor;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @DynamicInsert
+@SQLDelete(sql = "UPDATE board SET is_deleted = 1 WHERE id = ?")
+@SQLRestriction("is_deleted = 0")
 @Table(name = "board")
 public class Board extends Common {
 
