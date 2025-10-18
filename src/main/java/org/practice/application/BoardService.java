@@ -1,8 +1,8 @@
 package org.practice.application;
 
 import lombok.RequiredArgsConstructor;
-import org.practice.domain.Board;
-import org.practice.dto.request.CreateBoardRequest;
+import org.practice.domain.entity.Board;
+import org.practice.domain.request.CreateBoardRequest;
 import org.practice.infrastructure.BoardRepository;
 import org.springframework.stereotype.Service;
 

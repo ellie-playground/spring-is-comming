@@ -5,8 +5,8 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 import org.practice.application.BoardService;
-import org.practice.domain.Board;
-import org.practice.dto.request.CreateBoardRequest;
+import org.practice.domain.entity.Board;
+import org.practice.domain.request.CreateBoardRequest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
