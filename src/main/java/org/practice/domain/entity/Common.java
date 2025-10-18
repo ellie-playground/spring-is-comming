@@ -1,4 +1,4 @@
-package org.practice.domain;
+package org.practice.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

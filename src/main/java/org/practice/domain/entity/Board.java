@@ -1,4 +1,4 @@
-package org.practice.domain;
+package org.practice.domain.entity;
 
 import jakarta.persistence.*;
 
@@ -40,5 +40,10 @@ public class Board extends Common {
         this.title = title;
         this.content = content;
         this.memberId = 0L;
+    }
+
+    public void updateBoard(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }

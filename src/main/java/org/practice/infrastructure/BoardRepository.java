@@ -1,6 +1,6 @@
 package org.practice.infrastructure;
 
-import org.practice.domain.Board;
+import org.practice.domain.entity.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
