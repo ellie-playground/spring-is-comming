@@ -1,17 +1,20 @@
 package org.practice.presentation;
 
 import jakarta.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
+
 import org.practice.application.BoardService;
 import org.practice.domain.Board;
 import org.practice.dto.request.CreateBoardRequest;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
 
+// TODO: ResponseDto로 변경
 @RestController
 @RequestMapping("/api/v1/boards")
 @RequiredArgsConstructor
@@ -36,6 +39,6 @@ public class BoardController {
         if (board == null) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(boardService.getBoardById(id));
+        return ResponseEntity.ok(board);
     }
 }
