@@ -34,6 +34,8 @@ public class Board extends Common {
     @ColumnDefault("0")
     private Integer likes;
 
+    // TODO: 조회수 기능 구현
+
     public Board(String title, String content) {
         this.title = title;
         this.content = content;
