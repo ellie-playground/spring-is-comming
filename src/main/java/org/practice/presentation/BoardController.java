@@ -8,6 +8,7 @@ import org.practice.application.BoardService;
 import org.practice.domain.entity.Board;
 import org.practice.domain.request.CreateBoardRequest;
 
+import org.practice.domain.request.UpdateBoardRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,5 +41,11 @@ public class BoardController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(board);
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Void>  updateBoardById(@PathVariable Long id, @RequestBody @Valid UpdateBoardRequest request) {
+        boardService.updateBoardById(id, request);
+        return ResponseEntity.noContent().build();
     }
 }

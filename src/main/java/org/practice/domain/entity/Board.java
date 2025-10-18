@@ -41,4 +41,9 @@ public class Board extends Common {
         this.content = content;
         this.memberId = 0L;
     }
+
+    public void updateBoard(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
