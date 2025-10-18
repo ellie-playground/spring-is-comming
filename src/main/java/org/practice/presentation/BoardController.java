@@ -32,6 +32,11 @@ public class BoardController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Board> getBoardById(@PathVariable Long id) {
+        Board board = boardService.getBoardById(id);
+        if (board == null) {
+            // 204 no content
+            return ResponseEntity.noContent().build();
+        }
         return ResponseEntity.ok(boardService.getBoardById(id));
     }
 }

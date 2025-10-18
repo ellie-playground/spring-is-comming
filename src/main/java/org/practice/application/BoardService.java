@@ -25,6 +25,7 @@ public class BoardService {
 
     public Board getBoardById(Long id) {
         // return 값은 Optional<Board>, 값이 없는 경우 null 반환
+        // TODO: GlobalExceptionHandler 추가
         return boardRepository.findById(id).orElse(null);
     }
 }
